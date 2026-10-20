@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dennstore - Top Up Game Termurah & Tercepat</title>
+    <style>
+        body {
+            background-color: #1e2022;
+            color: #e2e8f0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #282a2d;
+            border-bottom: 1px solid #3f444a;
+            padding: 15px 20px;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
+        }
+        .nav-container {
+            max-width: 700px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 20px;
+            font-weight: 900;
+            color: #fbbf24;
+            letter-spacing: 1px;
+        }
+        .nav-menu a {
+            color: #cbd5e1;
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            margin-left: 20px;
+        }
+        main {
+            max-width: 700px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+        .card {
+            background-color: #282a2d;
+            border-radius: 12px;
+            border: 1px solid #3f444a;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            margin-bottom: 24px;
+            overflow: hidden;
+        }
+        .card-header {
+            background-color: #383a3e;
+            padding: 12px 20px;
+            border-bottom: 1px solid #3f444a;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .step-num {
+            background-color: #fbbf24;
+            color: #1e2022;
+            font-size: 12px;
+            font-weight: bold;
+            width: 22px;
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+        }
+        .card-title {
+            font-size: 14px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin: 0;
+        }
+        .card-body {
+            padding: 20px;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .input-group label {
+            display: block;
+            font-size: 12px;
+            color: #94a3b8;
+            margin-bottom: 8px;
+        }
+        .input-group input {
+            width: 100%;
+            box-sizing: border-box;
+            background-color: #1e2022;
+            border: 1px solid #4b5563;
+            border-radius: 8px;
+            padding: 10px 14px;
+            color: white;
+            font-size: 14px;
+        }
+        .nominal-title {
+            color: #fbbf24;
+            font-size: 13px;
+            font-weight: bold;
+            display: block;
+            margin-bottom: 15px;
+        }
+        .nominal-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        .nominal-item {
+            position: relative;
+            background-color: #1e2022;
+            border: 1px solid #4b5563;
+            border-radius: 12px;
+            padding: 16px;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+        }
+        .nominal-item input {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            accent-color: #fbbf24;
+        }
+        .diamond-text {
+            font-weight: 700;
+            font-size: 15px;
+            color: white;
+        }
+        .price-text {
+            font-size: 13px;
+            color: #fbbf24;
+            font-weight: 600;
+            margin-top: 4px;
+        }
+        .info-box {
+            background-color: #1e2022;
+            border: 1px solid #4b5563;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 12px;
+            color: #94a3b8;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        /* TOMBOL BELI SEKARANG DIBAWAH PAS */
+        .btn-submit {
+            width: 100%;
+            background-color: #fbbf24;
+            color: #1e2022;
+            font-weight: bold;
+            border: none;
+            padding: 16px;
+            border-radius: 12px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(251, 191, 36, 0.2);
+            transition: background-color 0.2s;
+        }
+        .btn-submit:hover {
+            background-color: #f59e0b;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav>
+        <div class="nav-container">
+            <span class="logo">💎 DENNSTORE</span>
+            <div class="nav-menu">
+                <a href="#">Topup</a>
+                <a href="#">Cek Transaksi</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- KONTEN UTAMA -->
+    <main>
+        <form action="denn.php" method="POST">
+            
+            <input type="hidden" name="game" value="Mobile Legends">
+            <input type="hidden" name="metode" value="QRIS/E-Wallet">
+
+            <!-- Langkah 1 -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="step-num">1</div>
+                    <h2 class="card-title">Masukkan Data Akun</h2>
+                </div>
+                <div class="card-body">
+                    <div class="form-grid">
+                        <div class="input-group">
+                            <label>ID</label>
+                            <input type="number" name="user_id" placeholder="Masukkan ID" required>
+                        </div>
+                        <div class="input-group">
+                            <label>Server</label>
+                            <input type="number" name="zone_id" placeholder="Masukkan Server" required>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Langkah 2 -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="step-num">2</div>
+                    <h2 class="card-title">Pilih Nominal</h2>
+                </div>
+                <div class="card-body">
+                    <span class="nominal-title">⚡ Special Items (Indonesia) ✨</span>
+                    <div class="nominal-grid">
+                        
+                        <div class="nominal-item">
+                            <input type="radio" name="nominal" value="50" checked>
+                            <span class="diamond-text">50 Diamonds</span>
+                            <span class="price-text">Rp 15.000</span>
+                        </div>
+
+                        <div class="nominal-item">
+                            <input type="radio" name="nominal" value="250">
+                            <span class="diamond-text">250 Diamonds</span>
+                            <span class="price-text">Rp 65.000</span>
+                        </div>
+
+                        <div class="nominal-item">
+                            <input type="radio" name="nominal" value="500">
+                            <span class="diamond-text">500 Diamonds</span>
+                            <span class="price-text">Rp 120.000</span>
+                        </div>
+
+                        <div class="nominal-item">
+                            <input type="radio" name="nominal" value="1000">
+                            <span class="diamond-text">1000 Diamonds</span>
+                            <span class="price-text">Rp 230.000</span>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Langkah 3: INFO & TOMBOL BELI PASTI KELIHATAN -->
+            <div class="info-box">
+                ℹ️ Pilihan metode bayar otomatis tersetting ke DANA / QRIS.
+            </div>
+            
+            <button type="submit" class="btn-submit">
+                🚀 Beli Sekarang!
+            </button>
+
+        </form>
+    </main>
+
+</body>
+</html>
