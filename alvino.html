@@ -1,0 +1,181 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Creative Website</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #141e30, #243b55);
+            color: white;
+            min-height: 100vh;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 10%;
+        }
+
+        nav h2 {
+            color: #7dd3fc;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 20px;
+        }
+
+        nav a:hover {
+            color: #7dd3fc;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px 60px;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+
+        .hero span {
+            color: #7dd3fc;
+        }
+
+        .hero p {
+            color: #cbd5e1;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        button {
+            background: #38bdf8;
+            color: #0f172a;
+            border: none;
+            padding: 14px 28px;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: white;
+            transform: scale(1.05);
+        }
+
+        .cards {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+            padding: 30px 20px 70px;
+            flex-wrap: wrap;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 30px;
+            width: 260px;
+            border-radius: 20px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .card h3 {
+            color: #7dd3fc;
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #cbd5e1;
+            line-height: 1.6;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: #94a3b8;
+        }
+
+        @media (max-width: 600px) {
+            nav {
+                padding: 20px;
+            }
+
+            nav a {
+                margin-left: 8px;
+                font-size: 13px;
+            }
+
+            .hero h1 {
+                font-size: 34px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h2>MyWeb.</h2>
+        <div>
+            <a href="#home">Home</a>
+            <a href="#fitur">Fitur</a>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>Welcome to My <span>Website!</span></h1>
+        <p>Belajar coding, berkreasi, dan membangun masa depan.</p>
+        <button onclick="sapaPengunjung()">
+            Mulai Sekarang
+        </button>
+    </section>
+
+    <section class="cards" id="fitur">
+        <div class="card">
+            <h3>💻 Web Design</h3>
+            <p>Membuat tampilan website yang menarik dan modern.</p>
+        </div>
+
+        <div class="card">
+            <h3>🚀 Programming</h3>
+            <p>Belajar coding dari dasar hingga mahir.</p>
+        </div>
+
+        <div class="card">
+            <h3>🎨 Creativity</h3>
+            <p>Mengembangkan ide kreatif melalui teknologi.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 MyWeb. Dibuat dengan HTML dan CSS.</p>
+    </footer>
+
+    <script>
+        function sapaPengunjung() {
+            alert("Halo! Selamat datang di website saya 🚀");
+        }
+    </script>
+
+</body>
+</html>
